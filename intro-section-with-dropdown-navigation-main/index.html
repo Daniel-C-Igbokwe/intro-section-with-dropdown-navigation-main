@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style.css">
+  <title>Frontend Mentor | Intro section with dropdown navigation</title>
+ 
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+  
+</head>
+<body>
+  <header>
+    <div class="navbar">
+      <label class="logo"><img src="./images/logo.svg" alt=""></label> 
+      <ul>
+        <li>        
+            <a href="#"><span class="features-text">Features</span>
+              <div class="arrow_btn"><i class="fa-solid fa-chevron-down"></i></div>
+              </a>
+             <div class="features">
+               <ul>
+                 <li><a class="text" href="#"><img class="inside" src="./images/icon-todo.svg" alt="">Todo <span>List</span></a></li>
+                 <li><a href="#"><img class="inside" src="./images/icon-calendar.svg" alt="">Calendar</a></li>
+                 <li><a href="#"><img class="inside" src="./images/icon-reminders.svg" alt="">Reminders</a></li>
+                 <li><a href="#"><img class="inside" src="./images/icon-planning.svg" alt="">Planning</a></li>
+               </ul>
+             </div>
+        </li>
+        <li>
+          <a href="#"><span class="company-text" >Company</span>
+            <div class="arrow_btn"><i class="fa-solid fa-chevron-down"></i></div></a> 
+            <div class="company">
+              <ul>
+                <li><a href="#">History</a></li>
+                <li><a class="text" href="#">Our<span>Team</span></a></li>
+                <li><a href="#">Blog</a></li>
+              </ul>
+            </div>
+        </li> 
+        <li class="Career-li">Careers</li>
+        <li><a href="#">About</a></li>
+        <li><a href="#" class="nav-extra">Login</a></li>
+      </ul> 
+      <a href="#" class="action_btn">Register</a>
+      <div class="toggle_btn">
+       <i class="fa-solid fa-bars"></i>
+      </div>
+    </div>
+
+    <!-- DROPDOWN MENU -->
+    <div class="dropdown_menu">
+      <li>   
+        <a href="#"><span class="features-text">Features</span><i class="fa-solid fa-chevron-down"></i></a>
+        <div class="same">
+          <ul>
+            <li><a class="text" href="#"><img class="inside" src="./images/icon-todo.svg" alt="">Todo <span>List</span></a></li>
+            <li><a href="#"><img class="inside" src="./images/icon-calendar.svg" alt="">Calendar</a></li>
+            <li><a href="#"><img class="inside" src="./images/icon-reminders.svg" alt="">Reminders</a></li>
+            <li><a href="#"><img class="inside" src="./images/icon-planning.svg" alt="">Planning</a></li>
+          </ul>
+        </div>   
+     </li>
+     <li>
+       <a href="#"><span class="company-text">Company</span><i class="fa-solid fa-chevron-down"></i></a>
+        <div class="same-1">
+          <ul>
+            <li><a href="#">History</a></li>
+            <li><a class="text" href="#">Our<span>Team</span></a></li>
+            <li><a href="#">Blog</a></li>
+          </ul>
+        </div> 
+     </li> 
+     <li class="Career-li">Careers</li>
+     <li><a href="#">About</a></li>
+     <li><a href="#" class="nav-extra">Login</a></li>
+     <li><a href="#" class="action_btn" >Register</a></li>
+    </div>
+  </header>
+  
+  <script>
+    const toggleBtn = document.querySelector('.toggle_btn')
+    const toggleBtnIcon = document.querySelector('.toggle_btn i')
+    const dropDownMenu = document.querySelector('.dropdown_menu')
+
+    toggleBtn.onclick = function () {
+      dropDownMenu.classList.toggle('open')
+      const isOpen = dropDownMenu.classList.contains('open')
+
+      toggleBtnIcon.classList = isOpen
+      ? 'fa-solid fa-xmark'
+      : 'fa-solid fa-bars'
+    }
+  </script>
+
+  
+
+<!-- CONTAINER -->
+  <div class="container">
+    <div class="intro-part">
+      <h1>Make <span>remote work</span></h1>
+
+      <p class="article"><span></span>Get your team in sync, no matter your location.<br> Streamline processes, 
+      create team rituals, and<br> watch productivity soar.</p>
+    
+      <button class="btn-1"><a href="#">Learn more</a></button>
+
+      <div class="icon-images">
+        <ul>
+          <li><img src="./images/client-databiz.svg" alt=""></li>
+          <li><img src="./images/client-audiophile.svg" alt=""></li>
+          <li><img src="./images/client-meet.svg" alt=""></li>
+          <li><img src="./images/client-maker.svg" alt=""></li>
+        </ul>
+      </div>
+    </div>
+
+      <img class="h-1" src="./images/image-hero-desktop.png" alt="">
+      <img class="h-2" src="./images/image-hero-mobile.png" alt="">
+
+  </div>
+  
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+    Coded by <a href="#">Daniel C Igbokwe</a>.
+  </div>
+</body>
+</html>

@@ -1,0 +1,417 @@
+@import url('https://fonts.googleapis.com/css2?family=Epilogue:wght@500;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+}
+
+body {
+    font-family: "Epilogue";
+    font-size: 100%;
+    background: var(--Almostwhite);
+}
+
+:root {
+    --Almostwhite:hsl(0, 0%, 98%);
+    --MediumGray: hsl(0, 0%, 41%);
+    --AlmostBlack: hsl(0, 0%, 8%);
+}
+
+header {
+    position: relative;
+    padding: 0 2rem;
+}
+
+.navbar {
+    display: flex;
+    height: 80px;
+    width: 100%;
+}
+
+.logo img{
+    width: 80px;
+    margin-top: 1.4rem;
+}
+
+.navbar ul{
+    display: flex; 
+    padding-top: 1.45rem;
+    padding-left: 2.4rem;
+    gap: 2.5rem;
+}
+
+.navbar ul li {
+    font-size: clamp(0.9vw, 0.6rem + 10%, 2em);
+}
+
+.navbar ul li a {
+    color: var(--MediumGray);
+    transition: all 0.3s;
+    display: flex;
+}
+
+.navbar ul li a:hover {
+    color: var(--AlmostBlack);
+}
+
+.nav-extra{
+    position: absolute;
+    left: 85%;
+    display: flex;
+    font-size: 0.8rem;
+    /* gap: 4rem; */
+}
+
+.action_btn {
+    position: absolute;
+    left: 90%;
+    font-size: 0.8rem ;
+    background-color: white;
+    color: var(--MediumGray);
+    height: 2rem;
+    border: 1px solid var(--AlmostBlack);
+    border-radius: 10px;
+    padding: 0.5rem 1rem;
+    margin-top: 2rem;
+}
+
+.action_btn:hover {
+    color: var(--AlmostBlack);
+}
+
+.toggle_btn {
+    font-size: 1.5rem;
+    line-height: 60px;
+    cursor: pointer;
+    display: none;
+}
+
+.arrow_btn {
+    position: static;
+    padding-left: 0.5rem;
+    font-size: .5rem;
+}
+
+
+/* HIDDEN-DROPDOWN */
+.features {
+    display: none;
+}
+
+.features ul {
+    background-color: white;
+    position: absolute;
+    left: 8%;
+    margin-top: 1rem;
+    display: block;
+    width: 130px;
+    height: 24vh; 
+    border-radius: 6px;
+    box-shadow: 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+} 
+
+.features ul li {
+    position: relative;
+    right: 30%;
+    padding-bottom: 14px; 
+}
+
+.features ul li a {
+    display: flex;
+}
+
+/* INSIDE-LI */
+.inside {
+    padding-right: 10px;
+}
+
+.navbar ul li:hover .features {
+    display: block;
+}
+
+/* COMPANY DROPDOWN */
+.company {
+    display: none;
+}
+
+.company ul {
+    background-color: white;
+    position: absolute;
+    left: 18%;
+    margin-top: 10rem;
+    display: block;
+    width: 98px;
+    height: 15vh;
+    border-radius: 6px;
+    box-shadow: 0px 5px 10px 0 rgba(0, 0, 0,0.2);
+}
+
+.company ul li {
+    position: relative;
+    right: 38%;
+    padding-bottom: 10px;
+}
+
+.text {
+    display: flex;
+}
+
+.text span {
+    margin-left: 2px;
+}
+
+.navbar ul li:hover .company {
+    display: block;
+}
+
+.Career-li {
+    color:  var(--MediumGray) ;
+}
+
+
+/* CONTAINER */
+.container {
+    display: flex;
+    position: relative;
+    left: 6%;
+    width: 85vw;
+}
+
+.intro-part {
+    position: relative;
+    left: 6%;
+    padding-top: 6.8rem;
+    width: 50%;
+}
+
+.intro-part h1 {
+    font-size: clamp(5.4vw, 1rem + 90%, 2em);
+}
+
+.intro-part .article {
+    font-family: "Epilogue";
+    font-size: clamp(1.1vw, 2rem + 80%, 17px);
+    color: var(--MediumGray);
+    padding-top: 2.5rem;
+    line-height: 1.6;
+}
+
+.h-1 {
+    position: relative;
+    left: 12%;
+    padding-top: 1.5rem;
+    width: 38%;
+    height: 13%;
+}
+
+.h-2 {
+    position: relative;
+    /* width: 100%; */
+    display: none;
+}
+
+/* BTN-1 */
+.btn-1 {
+    background-color: var(--AlmostBlack);
+    margin-top: 3rem;
+    padding: 14px 27px;
+    border-radius: 12px;
+}
+
+.btn-1 a {
+    color: var(--Almostwhite);
+    font-size: clamp(0.9vw, 4rem + 10%, 16px);
+}
+
+.btn-1:hover {
+    background-color: var(--Almostwhite);
+}
+
+.btn-1 a:hover {
+    color: var(--AlmostBlack);
+}
+
+/* ICON-IMAGES */
+.icon-images ul {
+    display: flex;
+    padding-top: 5.5rem;
+}
+
+.icon-images ul li img {
+    width: 68%;
+    padding-left: 1rem;
+}
+
+input {
+    display: none;
+}
+
+
+/* DROPDOWN MENU */
+.dropdown_menu {
+    position: absolute;
+    /* right: 10%; */
+    left: 44%; 
+    top: 60px;
+    width: 300px;
+    height: 0;
+    display: none;
+    background: var(--Almostwhite);
+    overflow: hidden;
+    z-index: 1;
+    transition: height 0.2s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    box-shadow: 6px 12px 14px black;
+}
+
+.dropdown_menu.open {
+    height: 1000px;
+}
+
+.dropdown_menu li {
+    font-size: clamp(1rem, 2.5vw + 9%, 15px); 
+    padding: 0.7rem;
+    color: var(--MediumGray);
+}
+
+.dropdown_menu li a {
+    color: var(--MediumGray);
+    display: flex;
+}
+
+.feat i {
+    position: static;
+    padding-left: 0.5rem;
+    font-size: 0.6rem;
+    padding-top: 0.2rem;
+    display: flex;
+}
+
+.same ul {
+    background: none;
+    position: static;
+    left: 7%;
+    margin-top: 1rem;
+    display: block;
+    width: 130px;
+    height: 18vh; 
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.same ul li {
+    position: static;
+    right: 12%;
+    padding-bottom: 14px; 
+}
+
+.same ul li a {
+    display: flex;
+}
+
+/* COMPANY-2 */
+.comp i {
+    position: static;
+    padding-left: 0.5rem;
+    font-size: 0.6rem;
+    padding-top: 0.2rem;
+    display: flex;
+}
+
+.same-1 ul {
+    background: none;
+    position: static;
+    left: 12%;
+    margin-top: 1rem;
+    display: block;
+    width: 98px;
+    height: 12vh;
+    border-radius: 0px;
+    box-shadow: none;
+}
+
+.same-1 ul li {
+    position: static;
+    right: 28%;
+    padding-bottom: 14px;
+}
+
+.dropdown_menu .nav-extra {
+   padding-left: 5rem;
+   padding-top: 1rem;
+}
+
+.dropdown_menu .action_btn {
+    margin-left: 0rem;
+    font-size: clamp(1rem, 2.5vw + 9%, 15px);
+    position: absolute;
+    left: 20%;
+    width: 40%
+}
+
+/* RESPONSIVE DESIGN */
+@media (max-width: 992px) {
+    .navbar ul,
+    .navbar .action_btn {
+        display: none;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+
+    .dropdown_menu li {
+        padding-left: 1rem;
+    }
+
+    .dropdown_menu .action_btn {
+        display: block;
+    }
+
+    .toggle_btn {
+        display: block; 
+        position: absolute;
+        right: 5%;
+    }
+      
+    .nav-extra {
+        padding-left: 0rem;
+    }
+
+    .container {
+       flex-direction: column-reverse;
+    }
+    
+    .h-1 {
+        display: none;
+    }
+
+    .h-2 {
+        display: block;
+        width: 100%;
+    }
+    
+    .intro-part {
+        position: relative;
+        left: 0%;
+        padding-top: 2rem;  
+        width: 100%;
+    }
+
+    .intro-part h1 {
+        text-align: center;
+        font-size: clamp(6.1vw, 2rem + 10%, 4.5em); 
+    }
+
+    .intro-part .article {
+        font-size: clamp(0.8vw, 1rem + 90%, 14px);
+        text-align: center;
+        padding-top: 1rem;
+    }
+
+    
+
+}
+
