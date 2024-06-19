@@ -44,7 +44,7 @@ header {
 }
 
 .navbar ul li {
-    font-size: clamp(0.9vw, 0.6rem + 10%, 2em);
+    font-size: clamp(0.5vw, 0.5rem + 10%, 20px);
 }
 
 .navbar ul li a {
@@ -61,21 +61,21 @@ header {
     position: absolute;
     left: 85%;
     display: flex;
-    font-size: 0.8rem;
+    font-size: clamp(0.5vw, 0.5rem + 10%, 20px);
     /* gap: 4rem; */
 }
 
 .action_btn {
     position: absolute;
     left: 90%;
-    font-size: 0.8rem ;
+    font-size: clamp(0.5vw, 0.5rem + 10%, 20px);
     background-color: white;
     color: var(--MediumGray);
     height: 2rem;
     border: 1px solid var(--AlmostBlack);
     border-radius: 10px;
     padding: 0.5rem 1rem;
-    margin-top: 2rem;
+    margin-top: 1rem;
 }
 
 .action_btn:hover {
@@ -89,7 +89,7 @@ header {
     display: none;
 }
 
-.arrow_btn {
+.fa-solid .fa-chevron-down  {
     position: static;
     padding-left: 0.5rem;
     font-size: .5rem;
@@ -241,7 +241,7 @@ header {
 }
 
 .icon-images ul li img {
-    width: 68%;
+    width: 78%;
     padding-left: 1rem;
 }
 
@@ -352,7 +352,7 @@ input {
 }
 
 /* RESPONSIVE DESIGN */
-@media (max-width: 992px) {
+@media (max-width: 768px) {
     .navbar ul,
     .navbar .action_btn {
         display: none;
